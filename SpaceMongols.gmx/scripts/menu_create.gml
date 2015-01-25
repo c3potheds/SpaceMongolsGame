@@ -10,7 +10,7 @@ return new;
 ///menu_build(menu)
 
 with (argument0) {
-    event_perform(ev_user0,0);
+    event_perform(ev_other,ev_user0);
 }
 
 #define menu_update

@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>panelx = view_wport/3;
 panely = view_hport-128;
+garrisonedShips = 0;
 </string>
           </argument>
         </arguments>
@@ -89,7 +90,21 @@ menu_addButton(id,button_travel);
             <string>draw_set_color(c_dkgray);
 draw_rectangle(panelx-128,panely,panelx-16,view_hport,false);
 draw_rectangle(panelx+16,panely,panelx+128,view_hport,false);
-
+draw_set_color(c_white);
+draw_set_halign(fa_center);
+draw_set_valign(fa_top);
+draw_text(panelx-72,panely+4,"Fleet");
+draw_text(panelx+72,panely+4,"Garrison");
+draw_sprite(spr_ship_icon,0,panelx-88,panely+64);
+draw_set_halign(fa_left);
+draw_set_valign(fa_middle);
+draw_text(panelx-72,panely+64,"x"+
+        string(obj_gameManager.playerContext.fleet.numberOfShips-garrisonedShips));
+if (garrisonedShips &gt; 0) {
+    draw_sprite(spr_ship_icon,0,panelx+56,panely+64);
+    draw_text(panelx+72,panely+64,"x"+
+            string(garrisonedShips));
+}
 </string>
           </argument>
         </arguments>

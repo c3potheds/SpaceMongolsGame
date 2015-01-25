@@ -22,10 +22,10 @@ return new;
 
 var xx, yy, nearestPlanet;
 var done = false;
-var border = sprite_get_width(spr_planet_blue);
+var border = sprite_get_width(spr_planet)*2;
 while (!done) {
     xx = random(room_width-border*2)+border;
-    yy = random(room_height-border*2)+border;
+    yy = random(room_height-border*4)+border*2;
     nearestPlanet = instance_nearest(xx,yy,obj_planet);
     if (nearestPlanet == noone || 
             point_distance(xx,yy,nearestPlanet.x,nearestPlanet.y) > border) {

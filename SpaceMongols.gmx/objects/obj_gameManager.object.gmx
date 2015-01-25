@@ -33,13 +33,15 @@ zoomFactor = 1;
 galaxy = galaxy_create('planets.json');
 
 //Initiate factions
-faction_player = faction_create("Tsunami Federation");
-faction_mongols = faction_create("Space Mongols");
+faction_player = faction_create("Tsunami Federation",0);
+faction_mongols = faction_create("Space Mongols",1);
 
 //Initialize players
 player_human = player_create(faction_player, obj_player_human);
-player_addFlagshipFleet(player_human, 
+playerContext = player_addFlagshipFleet(player_human, 
         galaxy_getPlanetNear(galaxy,room_width/2,room_height/2),5);
+view_xview = playerContext.x-view_wview/2;
+view_yview = playerContext.y-view_hview/2;
          
 player_mongols = player_create(faction_mongols, obj_player_computer);
 player_addFlagshipFleet(player_mongols,

@@ -27,7 +27,7 @@
   <sprites name="sprites">
     <sprite>sprites\spr_ship</sprite>
     <sprite>sprites\spr_ship_icon</sprite>
-    <sprite>sprites\spr_planet_blue</sprite>
+    <sprite>sprites\spr_planet</sprite>
     <sprite>sprites\spr_planet_red</sprite>
     <sprite>sprites\spr_asteroid</sprite>
     <sprite>sprites\spr_button</sprite>
@@ -50,6 +50,14 @@
     <script>scripts\menuManager_create.gml</script>
     <script>scripts\draw_hint.gml</script>
     <script>scripts\screen_coords_x.gml</script>
+    <scripts name="button callbacks">
+      <script>scripts\button_transferToGarrison_callback.gml</script>
+      <script>scripts\button_transferToFleet_callback.gml</script>
+      <script>scripts\button_fortify_callback.gml</script>
+      <script>scripts\button_travel_callback.gml</script>
+      <script>scripts\button_go_callback.gml</script>
+      <script>scripts\button_back_callback.gml</script>
+    </scripts>
   </scripts>
   <objects name="objects">
     <object>objects\obj_gameManager</object>
@@ -85,6 +93,8 @@
       <object>objects\obj_player_human</object>
       <object>objects\obj_player_computer</object>
     </objects>
+    <object>objects\obj_ship</object>
+    <object>objects\object26</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_game</room>
