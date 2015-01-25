@@ -31,6 +31,8 @@
     <sprite>sprites\spr_planet_red</sprite>
     <sprite>sprites\spr_asteroid</sprite>
     <sprite>sprites\spr_button</sprite>
+    <sprite>sprites\spr_planetSelection</sprite>
+    <sprite>sprites\spr_transit</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\back_stars</background>
@@ -40,12 +42,12 @@
   <scripts name="scripts">
     <script>scripts\fleet_create.gml</script>
     <script>scripts\planet_create.gml</script>
-    <script>scripts\init_ui_game.gml</script>
     <script>scripts\galaxy_create.gml</script>
     <script>scripts\faction_create.gml</script>
+    <script>scripts\transit_create.gml</script>
     <script>scripts\notification_create.gml</script>
-    <script>scripts\player_create.gml</script>
     <script>scripts\menu_create.gml</script>
+    <script>scripts\player_create.gml</script>
     <script>scripts\button_create.gml</script>
     <script>scripts\menuManager_create.gml</script>
     <script>scripts\draw_hint.gml</script>
@@ -58,6 +60,8 @@
       <script>scripts\button_go_callback.gml</script>
       <script>scripts\button_back_callback.gml</script>
     </scripts>
+    <script>scripts\script19.gml</script>
+    <script>scripts\ship_orbit.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_gameManager</object>
@@ -94,11 +98,14 @@
       <object>objects\obj_player_computer</object>
     </objects>
     <object>objects\obj_ship</object>
-    <object>objects\object26</object>
+    <object>objects\obj_planetSelection</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_game</room>
   </rooms>
+  <constants number="1">
+    <constant name="speedOfLight">8</constant>
+  </constants>
   <help>
     <rtf>help.rtf</rtf>
   </help>

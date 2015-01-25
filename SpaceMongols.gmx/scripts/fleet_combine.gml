@@ -1,11 +1,11 @@
 #define fleet_create
-///fleet_create(faction, numberOfShips, fuel, hasFlagship, x, y)
+///fleet_create(faction, numberOfShips, fuel, hasMothership, x, y)
 
 var new = instance_create(argument4,argument5,obj_fleet);
 new.faction = argument0;
 new.numberOfShips = argument1;
 new.fuel = argument2;
-new.hasFlagship = argument3;
+new.hasMothership = argument3;
 new.ships = ds_list_create();
 return new;
 
@@ -20,18 +20,4 @@ with (argument0) {
         ship_orbit(newShip,x,y);
         ds_list_add(ships, newShip);
     }
-}
-
-#define fleet_combine
-///fleet_combine(source, destination)
-
-if (argument0 == noone) {
-    return argument1;
-}
-if (argument0.faction != argument1.faction) {
-    show_error("Fleets to combine must be from the same faction",true);
-}
-with (argument1) {
-    numberOfShips += argument0.numberOfShips;
-    hasFlagship |= argument0.hasFlagship;
 }

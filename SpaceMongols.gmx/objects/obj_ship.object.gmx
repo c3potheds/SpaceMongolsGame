@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>image_speed = 0;
+mode = "orbit";
 </string>
           </argument>
         </arguments>
@@ -49,6 +50,11 @@
           <argument>
             <kind>1</kind>
             <string>image_angle = direction-90;
+
+if (mode == "transit") {
+    direction = point_direction(x,y,transit.x-formx,transit.y-formy);
+    speed = min(point_distance(x,y,transit.x-formx,transit.y-formy),10);
+}
 </string>
           </argument>
         </arguments>
@@ -66,5 +72,8 @@
   <PhysicsObjectFriction>0.200000002980232</PhysicsObjectFriction>
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
-  <PhysicsShapePoints/>
+  <PhysicsShapePoints>
+    <point>41,65</point>
+    <point>65,65</point>
+  </PhysicsShapePoints>
 </object>
