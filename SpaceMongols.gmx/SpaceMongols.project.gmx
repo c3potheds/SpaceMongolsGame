@@ -10,10 +10,11 @@
     <sprite>sprites\spr_planet_blue</sprite>
     <sprite>sprites\spr_planet_red</sprite>
     <sprite>sprites\spr_asteroid</sprite>
-    <sprite>sprites\sprite4</sprite>
+    <sprite>sprites\spr_button</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\back_stars</background>
+    <background>background\back_galaxy</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -21,6 +22,13 @@
     <script>scripts\planet_create.gml</script>
     <script>scripts\init_ui_game.gml</script>
     <script>scripts\galaxy_create.gml</script>
+    <script>scripts\faction_create.gml</script>
+    <script>scripts\notification_create.gml</script>
+    <script>scripts\player_create.gml</script>
+    <script>scripts\menu_create.gml</script>
+    <script>scripts\button_create.gml</script>
+    <script>scripts\menuManager_create.gml</script>
+    <script>scripts\draw_hint.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_gameManager</object>
@@ -29,7 +37,6 @@
     <object>objects\obj_fleet</object>
     <object>objects\obj_history</object>
     <object>objects\obj_faction</object>
-    <object>objects\obj_player</object>
     <object>objects\obj_playerContext</object>
     <object>objects\obj_potentialBattle</object>
     <object>objects\obj_potentialFortification</object>
@@ -45,6 +52,17 @@
       <object>objects\obj_menuManager</object>
       <object>objects\obj_menu</object>
       <object>objects\obj_button</object>
+      <objects name="game menus">
+        <object>objects\obj_menu_friendly</object>
+        <object>objects\obj_menu_battle</object>
+        <object>objects\obj_menu_travel</object>
+        <object>objects\obj_menu_transit</object>
+      </objects>
+    </objects>
+    <objects name="player model">
+      <object>objects\obj_player</object>
+      <object>objects\obj_player_human</object>
+      <object>objects\obj_player_computer</object>
     </objects>
   </objects>
   <rooms name="rooms">
