@@ -62,6 +62,7 @@
     </scripts>
     <script>scripts\script19.gml</script>
     <script>scripts\ship_orbit.gml</script>
+    <script>scripts\battle.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_gameManager</object>
