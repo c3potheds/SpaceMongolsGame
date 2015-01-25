@@ -1,7 +1,6 @@
 #define galaxy_create
 ///galaxy_create(filename)
 
-randomize();
 var new = instance_create(0,0,obj_galaxy);
 new.players = noone;
 new.numberOfPlayers = 0;
@@ -24,11 +23,11 @@ var xx, yy, nearestPlanet;
 var done = false;
 var border = sprite_get_width(spr_planet_blue);
 while (!done) {
-    xx = random(room_width-border*2)+border;
-    yy = random(room_height-border*2)+border;
+    xx = random(room_width-border)+border/2;
+    yy = random(room_height-border)+border/2;
     nearestPlanet = instance_nearest(xx,yy,obj_planet);
     if (nearestPlanet == noone || 
-            point_distance(xx,yy,nearestPlanet.x,nearestPlanet.y) > border) {
+            point_distance(xx,yy,nearestPlanet.x,nearestPlanet.y) < border) {
         var planet = planet_create(xx,yy,argument1,argument2);
         ds_list_add(argument0.planets,planet);
         done = true;

@@ -7,7 +7,95 @@
   <persistent>0</persistent>
   <parentName>obj_menu</parentName>
   <maskName>&lt;undefined&gt;</maskName>
-  <events/>
+  <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>panelx = view_wport/3;
+panely = view_hport-128;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="10">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Build menu
+
+button_transferToGarrison = button_create("&gt;",panelx-16,panely+16,32,32,c_black,
+        "Transfer to garrison", button_transferToGarrison_callback);
+button_transferToFleet = button_create("&lt;",panelx-16,panely+80,32,32,c_black,
+        "Transfer to fleet", button_transferToFleet_callback);
+button_fortify = button_create("Fortify",panelx*2,panely+48,64,32,c_black,
+        "Spend 1 year to create 1 ship", button_fortify_callback);
+button_travel = button_create("Travel",view_wport-96,view_hport-96,64,64,c_black,
+        "Select a destination to travel to", button_travel_callback);
+
+menu_addButton(id,button_transferToGarrison);
+menu_addButton(id,button_transferToFleet);
+menu_addButton(id,button_fortify);
+menu_addButton(id,button_travel);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="64">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_set_color(c_dkgray);
+draw_rectangle(panelx-128,panely,panelx-16,view_hport,false);
+draw_rectangle(panelx+16,panely,panelx+128,view_hport,false);
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+  </events>
   <PhysicsObject>0</PhysicsObject>
   <PhysicsObjectSensor>0</PhysicsObjectSensor>
   <PhysicsObjectShape>0</PhysicsObjectShape>

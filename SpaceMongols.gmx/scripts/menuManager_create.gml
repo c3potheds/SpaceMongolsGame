@@ -4,6 +4,7 @@
 var new = instance_create(0,0,obj_menuManager);
 new.menuStack = ds_stack_create();
 new.currentMenu = argument0;
+menu_enter(new.currentMenu);
 return new;
 
 #define menuManager_update
@@ -44,11 +45,5 @@ with (argument0) {
 ///menuManager_draw(menuManager)
 
 with (argument0) {
-    var menuSurface = surface_create(view_wview,view_hview);
-    surface_set_target(menuSurface);
     menu_draw(currentMenu);
-    surface_reset_target();
-    if (surface_exists(menuSurface)) {
-        draw_surface_stretched(menuSurface,view_xview,view_yview,view_wview,view_hview);
-    }
 }
