@@ -7,7 +7,39 @@
   <persistent>0</persistent>
   <parentName>obj_menu</parentName>
   <maskName>&lt;undefined&gt;</maskName>
-  <events/>
+  <events>
+    <event eventtype="7" enumb="10">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Build menu
+
+button_engage = button_create("Engage!",view_wport/2-256,view_hport/2+128,128,32,c_black,
+        "Engage the enemy fleet", button_engage_callback);
+button_retreat = button_create("Retreat!",view_wport/2+128,view_hport/2+128,128,32,c_black,
+        "Transfer to fleet", button_retreat_callback);
+
+menu_addButton(id,button_engage);
+menu_addButton(id,button_retreat);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+  </events>
   <PhysicsObject>0</PhysicsObject>
   <PhysicsObjectSensor>0</PhysicsObjectSensor>
   <PhysicsObjectShape>0</PhysicsObjectShape>

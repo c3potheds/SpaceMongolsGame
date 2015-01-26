@@ -36,8 +36,8 @@ with (argument1) {
     hasFlagship |= argument0.hasFlagship;
 }
 
-#define fleet_destroyShip
-///fleet_destroyShip(fleet)
+#define fleet_destroy_ship
+///fleet_destroy_ship(fleet)
 
 with (argument0) {
     if (ds_list_size(ships) > 0) {
@@ -47,6 +47,5 @@ with (argument0) {
             instance_destroy();
         }
         ds_list_delete(ships,i);
-        numberOfShips--;
     }
 }

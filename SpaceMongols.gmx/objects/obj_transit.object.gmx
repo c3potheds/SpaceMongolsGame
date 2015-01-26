@@ -2,7 +2,7 @@
 <object>
   <spriteName>spr_transit</spriteName>
   <solid>0</solid>
-  <visible>-1</visible>
+  <visible>0</visible>
   <depth>-12</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
@@ -27,25 +27,9 @@
             <kind>1</kind>
             <string>context.x = x;
 context.y = y;
+
 if (collision_point(destination.x, destination.y, id, false, false)) {
-    for (var i=0;i&lt;ds_list_size(context.fleet.ships);i++) {
-        var ship = context.fleet.ships[|i];
-        ship.mode = "orbit";
-        ship_orbit(ship,destination.x,destination.y);
-    }
-    if (planet_isFriendly(destination,context.fleet.faction)) {
-        //Put this context.fleet on the planet
-        planet_addFleet(destination,context.fleet);
-        destination.image_index = context.fleet.faction.skin;
-        menuManager_goto(obj_gameManager.menuManager,menu_friendly);
-    }
-    else {
-        menuManager_goto(obj_gameManager.menuManager,menu_battle);
-    }
-    obj_gameManager.playerContext.currentPlanet = destination;
-    context.x = destination.x;
-    context.y = destination.y;
-    instance_destroy();
+    transit_arrive(id);
 }
 </string>
           </argument>

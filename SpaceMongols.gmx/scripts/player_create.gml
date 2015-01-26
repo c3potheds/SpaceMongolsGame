@@ -16,6 +16,7 @@ with (argument0) {
     fleet_buildView(new.fleet, argument2);
     new.currentPlanet = argument1;
     new.currentPlanet.image_index = faction.skin;
+    new.currentPlanet.fleet = new.fleet;
     new.x = new.currentPlanet.x;
     new.y = new.currentPlanet.y;
     ds_list_add(playerContexts,new);

@@ -59,10 +59,11 @@
       <script>scripts\button_travel_callback.gml</script>
       <script>scripts\button_go_callback.gml</script>
       <script>scripts\button_back_callback.gml</script>
+      <script>scripts\button_engage_callback.gml</script>
     </scripts>
-    <script>scripts\script19.gml</script>
-    <script>scripts\ship_orbit.gml</script>
     <script>scripts\battle.gml</script>
+    <script>scripts\button_retreat_callback.gml</script>
+    <script>scripts\ship_orbit.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_gameManager</object>
