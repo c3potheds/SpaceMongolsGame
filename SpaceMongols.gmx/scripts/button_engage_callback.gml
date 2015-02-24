@@ -1,13 +1,5 @@
 
 var planet = obj_gameManager.playerContext.currentPlanet;
-
-//returns the victor of the battle
-var victor = battle(obj_gameManager.playerContext.fleet, 
-        obj_gameManager.playerContext.currentPlanet.fleet);
-        
-planet.fleet = victor;
-planet.image_index = victor.faction.skin;
-
 var victor = battle(obj_gameManager.playerContext.fleet, 
         obj_gameManager.playerContext.currentPlanet.fleet);
 planet.fleet = victor;
@@ -17,6 +9,4 @@ if (victor == obj_gameManager.playerContext.fleet) {
 }
 else {
     show_message("You lose");
-}}
-    show_message("Your fleet was destroyed. All hope is lost.");
 }

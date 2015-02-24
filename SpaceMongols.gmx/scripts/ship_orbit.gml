@@ -14,4 +14,4 @@ with (argument0) {
     path_set_kind(p,1);
     path_set_closed(p,true);
     path_start(p,10,1,true);
-}}
+}

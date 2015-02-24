@@ -71,30 +71,6 @@ menuManager = menuManager_create(menu_friendly);
           </argument>
         </arguments>
       </action>
-      <action>
-        <libid>1</libid>
-        <id>211</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_sound</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>6</kind>
-            <sound>MilkyWay</sound>
-          </argument>
-          <argument>
-            <kind>3</kind>
-            <string>1</string>
-          </argument>
-        </arguments>
-      </action>
     </event>
     <event eventtype="3" enumb="0">
       <action>
@@ -285,25 +261,6 @@ drag_y = mouse_y;
         </arguments>
       </action>
     </event>
-<<<<<<< HEAD
-    <event eventtype="9" enumb="82">
-      <action>
-        <libid>1</libid>
-        <id>331</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_restart_game</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-      </action>
-    </event>
-=======
->>>>>>> origin/master
     <event eventtype="9" enumb="27">
       <action>
         <libid>1</libid>
