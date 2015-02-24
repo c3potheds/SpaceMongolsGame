@@ -42,4 +42,4 @@ with (argument0) {
     context.x = destination.x;
     context.y = destination.y;
     instance_destroy();
-}
+}}

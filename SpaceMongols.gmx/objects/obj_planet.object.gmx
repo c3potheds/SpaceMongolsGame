@@ -88,7 +88,8 @@ else {
     }
     var selection = instance_create(x,y,obj_planetSelection);
     selection.planet = id;
-    selection.image_blend = c_blue;
+<<<<<<< HEAD
+    //selection.image_blend = c_blue;
 }
 </string>
           </argument>

@@ -23,7 +23,9 @@
     </datafile>
   </datafiles>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\MilkyWay</sound>
+  </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_ship</sprite>
     <sprite>sprites\spr_ship_icon</sprite>
@@ -32,6 +34,10 @@
     <sprite>sprites\spr_asteroid</sprite>
     <sprite>sprites\spr_button</sprite>
     <sprite>sprites\spr_planetSelection</sprite>
+<<<<<<< HEAD
+    <sprite>sprites\spr_planetSelectionAlt</sprite>
+=======
+>>>>>>> origin/master
     <sprite>sprites\spr_transit</sprite>
   </sprites>
   <backgrounds name="background">
@@ -46,6 +52,12 @@
     <script>scripts\faction_create.gml</script>
     <script>scripts\transit_create.gml</script>
     <script>scripts\notification_create.gml</script>
+<<<<<<< HEAD
+    <script>scripts\menu_create.gml</script>
+    <script>scripts\player_create.gml</script>
+    <script>scripts\button_create.gml</script>
+    <script>scripts\menuManager_create.gml</script>
+=======
     <script>scripts\player_create.gml</script>
     <scripts name="gui engine">
       <scripts name="menuManager">
@@ -58,6 +70,7 @@
         <script>scripts\button_create.gml</script>
       </scripts>
     </scripts>
+>>>>>>> origin/master
     <script>scripts\draw_hint.gml</script>
     <script>scripts\screen_coords_x.gml</script>
     <scripts name="button callbacks">
@@ -68,6 +81,8 @@
       <script>scripts\button_go_callback.gml</script>
       <script>scripts\button_back_callback.gml</script>
       <script>scripts\button_engage_callback.gml</script>
+<<<<<<< HEAD
+=======
       <script>scripts\button_retreat_callback.gml</script>
     </scripts>
     <script>scripts\battle.gml</script>
@@ -88,8 +103,15 @@
       <script>scripts\server_addClient.gml</script>
       <script>scripts\server_disconnectClient.gml</script>
       <script>scripts\server_handleBuffer.gml</script>
+>>>>>>> origin/master
     </scripts>
+    <script>scripts\battle.gml</script>
+    <script>scripts\button_retreat_callback.gml</script>
+    <script>scripts\ship_orbit.gml</script>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\font0</font>
+  </fonts>
   <objects name="objects">
     <object>objects\obj_gameManager</object>
     <object>objects\obj_galaxy</object>
@@ -126,7 +148,10 @@
     </objects>
     <object>objects\obj_ship</object>
     <object>objects\obj_planetSelection</object>
+<<<<<<< HEAD
+=======
     <object>objects\obj_server</object>
+>>>>>>> origin/master
   </objects>
   <rooms name="rooms">
     <room>rooms\room_game</room>
