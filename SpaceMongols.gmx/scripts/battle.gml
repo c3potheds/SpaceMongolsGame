@@ -1,10 +1,14 @@
 ///battle(attackingFleet, defendingFleet)
 //Returns the victor of a battle
 
+<<<<<<< HEAD
 
 while (true) {
     //if attackingFleet loses all their ships
     //return defendingFleet
+=======
+while (true) {
+>>>>>>> origin/master
     if (argument0.numberOfShips == 0) {
         return argument1;
     }

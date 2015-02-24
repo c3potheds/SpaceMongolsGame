@@ -23,4 +23,3 @@ with (argument0) {
 
 with (argument0) {
     fleet_combine(fleet,argument1);
-}

@@ -285,6 +285,7 @@ drag_y = mouse_y;
         </arguments>
       </action>
     </event>
+<<<<<<< HEAD
     <event eventtype="9" enumb="82">
       <action>
         <libid>1</libid>
@@ -301,6 +302,8 @@ drag_y = mouse_y;
         <isnot>0</isnot>
       </action>
     </event>
+=======
+>>>>>>> origin/master
     <event eventtype="9" enumb="27">
       <action>
         <libid>1</libid>
