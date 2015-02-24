@@ -1,12 +1,12 @@
 #define fleet_create
-///fleet_create(faction, numberOfShips, fuel, hasMothership, x, y)
+///fleet_create(faction, numberOfShips, fuel, hasFlagship, x, y)
 
 var new = instance_create(argument4,argument5,obj_fleet);
 new.faction = argument0;
 new.numberOfShips = argument1;
 new.fuel = argument2;
-new.hasMothership = argument3;
-new.ships = ds_stack_create();
+new.hasFlagship = argument3;
+new.ships = ds_list_create();
 return new;
 
 #define fleet_buildView
@@ -17,20 +17,36 @@ with (argument0) {
         var newShip = instance_create(x,y,obj_ship);
         newShip.image_index = faction.skin;
         newShip.fleet = id;
-        var p = path_add();
-        var axis1 = random_range(50,200);
-        var axis2 = choose(-1,1)*random_range(50,200);
-        path_add_point(p,x+axis1,y+axis2,10);
-        path_add_point(p,x+axis1,y-axis2,10);
-        path_add_point(p,x-axis1,y-axis2,10);
-        path_add_point(p,x-axis1,y+axis2,10);
-        path_rotate(p,random(360));
-        path_set_precision(p,8);
-        path_set_kind(p,1);
-        path_set_closed(p,true);
-        with (newShip) {
-            path_start(p,10,1,true);
+        ship_orbit(newShip,x,y);
+        ds_list_add(ships, newShip);
+    }
+}
+
+#define fleet_combine
+///fleet_combine(source, destination)
+
+if (argument0 == noone) {
+    return argument1;
+}
+if (argument0.faction != argument1.faction) {
+    show_error("Fleets to combine must be from the same faction",true);
+}
+with (argument1) {
+    numberOfShips += argument0.numberOfShips;
+    hasFlagship |= argument0.hasFlagship;
+}
+
+#define fleet_destroyShip
+///fleet_destroyShip(fleet)
+
+with (argument0) {
+    if (ds_list_size(ships) > 0) {
+        i = ds_list_size(ships)-1;
+        with (ships[|i]) {
+            effect_create_above(ef_firework,x,y,0,choose(c_yellow,c_orange));
+            instance_destroy();
         }
-        ds_stack_push(ships, newShip);
+        ds_list_delete(ships,i);
+        numberOfShips--;
     }
 }

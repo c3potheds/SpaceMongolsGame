@@ -45,11 +45,11 @@ view_yview = playerContext.y-view_hview/2;
          
 player_mongols = player_create(faction_mongols, obj_player_computer);
 player_addFlagshipFleet(player_mongols,
-        galaxy_getPlanetNear(galaxy,0,room_height/2),5);
+        galaxy_getPlanetNear(galaxy,0,room_height/2),2);
 player_addFlagshipFleet(player_mongols,
-        galaxy_getPlanetNear(galaxy,0,0),5);
+        galaxy_getPlanetNear(galaxy,0,0),2);
 player_addFlagshipFleet(player_mongols,
-        galaxy_getPlanetNear(galaxy,room_width,room_height/2),10);
+        galaxy_getPlanetNear(galaxy,room_width,room_height/2),5);
         
 galaxy_addPlayer(galaxy,player_human);
 galaxy_addPlayer(galaxy,player_mongols);
@@ -68,6 +68,30 @@ menu_build(menu_transit);
 menuManager = menuManager_create(menu_friendly);
 
 </string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>211</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_sound</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>6</kind>
+            <sound>MilkyWay</sound>
+          </argument>
+          <argument>
+            <kind>3</kind>
+            <string>1</string>
           </argument>
         </arguments>
       </action>
@@ -95,8 +119,17 @@ if (dragging) {
     view_xview = view_xview + drag_x - mouse_x
     view_yview = view_yview + drag_y - mouse_y
     
-    view_xview = clamp(view_xview, 0, room_width - view_wview);
-    view_yview = clamp(view_yview, 0, room_height - view_hview);
+    //view_xview = clamp(view_xview, 0, room_width - view_wview);
+    //view_yview = clamp(view_yview, 0, room_height - view_hview);
+}
+else {
+    var dx = playerContext.x-view_wview/2-view_xview;
+    var dy = playerContext.y-view_hview/2-view_yview;
+    var dist = point_distance(0,0,dx,dy);
+    if (dist &gt; 0) {
+        view_xview += clamp(dx*0.05*zoomFactor, -abs(dx), abs(dx));
+        view_yview += clamp(dy*0.05*zoomFactor, -abs(dy), abs(dy));
+    }
 }
 
 //Update backgrounds
@@ -131,8 +164,8 @@ var ratio = 728/1024;
 zoomFactor = clamp(zoomFactor*1.05,1,5);
 view_xview = view_xview+view_wview/2-1024*zoomFactor/2;
 view_yview = view_yview+view_hview/2-768*zoomFactor/2;
-view_xview = clamp(view_xview, 0, room_width - view_wview);
-view_yview = clamp(view_yview, 0, room_height - view_hview);
+view_xview = clamp(view_xview, -room_width, room_width*2 - view_wview);
+view_yview = clamp(view_yview, -room_height, room_height*2 - view_hview);
 view_wview = 1024*zoomFactor;
 view_hview = 768*zoomFactor;
 
@@ -167,8 +200,8 @@ var ratio = 728/1024;
 zoomFactor = clamp(zoomFactor/1.05,1,5);
 view_xview = view_xview+view_wview/2-1024*zoomFactor/2;
 view_yview = view_yview+view_hview/2-768*zoomFactor/2;
-view_xview = clamp(view_xview, 0, room_width - view_wview);
-view_yview = clamp(view_yview, 0, room_height - view_hview);
+view_xview = clamp(view_xview, -room_width, room_width*2 - view_wview);
+view_yview = clamp(view_yview, -room_height, room_height*2 - view_hview);
 view_wview = 1024*zoomFactor;
 view_hview = 768*zoomFactor;
 
@@ -250,6 +283,38 @@ drag_y = mouse_y;
 </string>
           </argument>
         </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="82">
+      <action>
+        <libid>1</libid>
+        <id>331</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_restart_game</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+    </event>
+    <event eventtype="9" enumb="27">
+      <action>
+        <libid>1</libid>
+        <id>332</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_end_game</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
       </action>
     </event>
   </events>
