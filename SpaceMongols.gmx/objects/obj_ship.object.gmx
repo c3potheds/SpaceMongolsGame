@@ -53,7 +53,7 @@ mode = "orbit";
 
 if (mode == "transit") {
     direction = point_direction(x,y,transit.x-formx,transit.y-formy);
-    speed = min(point_distance(x,y,transit.x-formx,transit.y-formy),10);
+    speed = min(point_distance(x,y,transit.x-formx,transit.y-formy),speedOfLight + 2);
 }
 </string>
           </argument>

@@ -133,7 +133,7 @@
     <room>rooms\room_game</room>
   </rooms>
   <constants number="1">
-    <constant name="speedOfLight">8</constant>
+    <constant name="speedOfLight">20</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>
