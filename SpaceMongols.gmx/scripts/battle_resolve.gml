@@ -1,4 +1,4 @@
-///battle(attackingFleet, defendingFleet)
+///battle_resolve(attackingFleet, defendingFleet)
 //Returns the victor of a battle
 
 while (true) {

@@ -1,6 +1,6 @@
 
 var planet = obj_gameManager.playerContext.currentPlanet;
-var victor = battle(obj_gameManager.playerContext.fleet, 
+var victor = battle_resolve(obj_gameManager.playerContext.fleet, 
         obj_gameManager.playerContext.currentPlanet.fleet);
 planet.fleet = victor;
 planet.image_index = victor.faction.skin;
