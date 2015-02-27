@@ -114,6 +114,7 @@
           <script>scripts\menuManager_pop.gml</script>
           <script>scripts\menuManager_goto.gml</script>
           <script>scripts\menuManager_draw.gml</script>
+          <script>scripts\menuManager_build.gml</script>
         </scripts>
         <scripts name="menu">
           <script>scripts\menu_create.gml</script>
@@ -129,6 +130,36 @@
           <script>scripts\button_update.gml</script>
           <script>scripts\button_draw.gml</script>
         </scripts>
+      </scripts>
+      <scripts name="gui builder">
+        <scripts name="menu">
+          <script>scripts\build_menu.gml</script>
+          <script>scripts\build_menu_orientation.gml</script>
+          <script>scripts\build_menu_position.gml</script>
+          <script>scripts\build_menu_align.gml</script>
+          <script>scripts\build_menu_controller.gml</script>
+          <script>scripts\build_menu_width.gml</script>
+        </scripts>
+        <scripts name="menuManager">
+          <script>scripts\build_menuManager.gml</script>
+        </scripts>
+        <scripts name="button">
+          <script>scripts\build_button.gml</script>
+          <script>scripts\build_button_callback.gml</script>
+        </scripts>
+        <scripts name="properties">
+          <script>scripts\build_textColor.gml</script>
+          <script>scripts\build_backgroundColor.gml</script>
+          <script>scripts\build_borderColor.gml</script>
+        </scripts>
+        <scripts name="label">
+          <script>scripts\build_label.gml</script>
+        </scripts>
+        <scripts name="spacer">
+          <script>scripts\build_spacer.gml</script>
+        </scripts>
+        <script>scripts\build.gml</script>
+        <script>scripts\buildAllMenus.gml</script>
       </scripts>
       <script>scripts\draw_hint.gml</script>
       <script>scripts\notification_create.gml</script>
@@ -172,11 +203,19 @@
     <object>objects\obj_ship</object>
     <object>objects\obj_planetSelection</object>
     <object>objects\obj_server</object>
+    <object>objects\obj_builder</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_game</room>
   </rooms>
-  <constants number="1">
+  <constants number="8">
+    <constant name="CENTER">0</constant>
+    <constant name="RIGHT">2</constant>
+    <constant name="LEFT">-2</constant>
+    <constant name="BOTTOM">-1</constant>
+    <constant name="TOP">1</constant>
+    <constant name="VERTICAL">2</constant>
+    <constant name="HORIZONTAL">1</constant>
     <constant name="speedOfLight">20</constant>
   </constants>
   <help>
