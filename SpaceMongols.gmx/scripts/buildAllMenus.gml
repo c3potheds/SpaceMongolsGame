@@ -1,4 +1,4 @@
-menuManager_game_builder = build_menuManager(
+menuManager_game = build(build_menuManager(
     //PLANET CONTROL MENU
     build_menu('Planet Control Menu',
         build_menu_position(BOTTOM | LEFT),
@@ -63,5 +63,4 @@ menuManager_game_builder = build_menuManager(
             )
         )
     )
-);
-build(menuManager_game_builder);
+));

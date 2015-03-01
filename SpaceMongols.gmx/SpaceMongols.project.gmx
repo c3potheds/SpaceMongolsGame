@@ -78,6 +78,19 @@
         <script>scripts\transit_arrive.gml</script>
       </scripts>
     </scripts>
+    <scripts name="game logic">
+      <scripts name="planet events">
+        <script>scripts\planetEvent_fleetDeparts.gml</script>
+        <script>scripts\planetEvent_fleetArrives.gml</script>
+        <script>scripts\planetEvent_fleetTransfer.gml</script>
+        <script>scripts\planetEvent_constructionStarted.gml</script>
+        <script>scripts\planetEvent_constructionScheduled.gml</script>
+        <script>scripts\planetEvent_constructionCancelled.gml</script>
+        <script>scripts\planetEvent_constructionFinished.gml</script>
+        <script>scripts\planetEvent_allegianceChanged.gml</script>
+        <script>scripts\planetEvent_battleResults.gml</script>
+      </scripts>
+    </scripts>
     <scripts name="button callbacks">
       <script>scripts\button_transferToGarrison_callback.gml</script>
       <script>scripts\button_transferToFleet_callback.gml</script>
@@ -87,17 +100,6 @@
       <script>scripts\button_back_callback.gml</script>
       <script>scripts\button_engage_callback.gml</script>
       <script>scripts\button_retreat_callback.gml</script>
-    </scripts>
-    <scripts name="planet events">
-      <script>scripts\planetEvent_fleetDeparts.gml</script>
-      <script>scripts\planetEvent_fleetArrives.gml</script>
-      <script>scripts\planetEvent_fleetTransfer.gml</script>
-      <script>scripts\planetEvent_constructionStarted.gml</script>
-      <script>scripts\planetEvent_constructionScheduled.gml</script>
-      <script>scripts\planetEvent_constructionCancelled.gml</script>
-      <script>scripts\planetEvent_constructionFinished.gml</script>
-      <script>scripts\planetEvent_allegianceChanged.gml</script>
-      <script>scripts\planetEvent_battle.gml</script>
     </scripts>
     <scripts name="server">
       <script>scripts\server_create.gml</script>
@@ -124,6 +126,10 @@
           <script>scripts\menu_enter.gml</script>
           <script>scripts\menu_draw.gml</script>
           <script>scripts\menu_addButton.gml</script>
+          <script>scripts\menu_addLabel.gml</script>
+          <script>scripts\menu_addMenu.gml</script>
+          <script>scripts\menu_addMenuManager.gml</script>
+          <script>scripts\menu_setController.gml</script>
         </scripts>
         <scripts name="button">
           <script>scripts\button_create.gml</script>
@@ -158,12 +164,28 @@
         <scripts name="spacer">
           <script>scripts\build_spacer.gml</script>
         </scripts>
-        <script>scripts\build.gml</script>
         <script>scripts\buildAllMenus.gml</script>
+        <script>scripts\buildGUIPrototypes.gml</script>
       </scripts>
       <script>scripts\draw_hint.gml</script>
       <script>scripts\notification_create.gml</script>
       <script>scripts\screen_coords_x.gml</script>
+    </scripts>
+    <scripts name="utils">
+      <script>scripts\pass.gml</script>
+      <scripts name="build engine">
+        <script>scripts\build.gml</script>
+        <script>scripts\builder_type.gml</script>
+        <script>scripts\builder_addData.gml</script>
+        <script>scripts\builder_addComponents.gml</script>
+        <script>scripts\builder_dataHandler.gml</script>
+        <script>scripts\builder_componentHandler.gml</script>
+      </scripts>
+      <scripts name="arrays">
+        <script>scripts\array_slice.gml</script>
+        <script>scripts\array_sliceTo.gml</script>
+        <script>scripts\array_sliceFrom.gml</script>
+      </scripts>
     </scripts>
   </scripts>
   <objects name="objects">
@@ -194,6 +216,15 @@
         <object>objects\obj_menu_travel</object>
         <object>objects\obj_menu_transit</object>
       </objects>
+      <objects name="menu controllers">
+        <object>objects\obj_fleetPaneController</object>
+      </objects>
+      <objects name="new menu engine">
+        <object>objects\obj_gui_menuManager</object>
+        <object>objects\obj_gui_menu</object>
+        <object>objects\obj_gui_button</object>
+        <object>objects\obj_gui_label</object>
+      </objects>
     </objects>
     <objects name="player model">
       <object>objects\obj_player</object>
@@ -203,7 +234,10 @@
     <object>objects\obj_ship</object>
     <object>objects\obj_planetSelection</object>
     <object>objects\obj_server</object>
-    <object>objects\obj_builder</object>
+    <objects name="builders">
+      <object>objects\obj_builder</object>
+      <object>objects\obj_build</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_game</room>
