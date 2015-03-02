@@ -8,6 +8,11 @@ menuManager_game = build(build_menuManager(
             build_label('Construction',
                 build_textColor(c_white),
                 build_backgroundColor(c_gray)
+            ),
+            build_menu('Construction Options',
+                build_menu_controller(obj_constructionPaneController),
+                build_menu_orientation(VERTICAL),
+                build_menu_width(128)
             )
         ),
         build_menu('Fleet Pane',

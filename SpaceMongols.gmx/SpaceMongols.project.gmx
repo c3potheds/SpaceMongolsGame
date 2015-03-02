@@ -180,14 +180,51 @@
         <script>scripts\builder_addComponents.gml</script>
         <script>scripts\builder_dataHandler.gml</script>
         <script>scripts\builder_componentHandler.gml</script>
+        <script>scripts\builder_defaultComponentHandler.gml</script>
+        <script>scripts\builder_defaultDataHandler.gml</script>
       </scripts>
       <scripts name="arrays">
         <script>scripts\array_slice.gml</script>
         <script>scripts\array_sliceTo.gml</script>
         <script>scripts\array_sliceFrom.gml</script>
+        <script>scripts\array_equals.gml</script>
+        <script>scripts\array_add.gml</script>
+        <script>scripts\Array.gml</script>
+      </scripts>
+      <scripts name="unit test">
+        <script>scripts\console_create.gml</script>
+        <script>scripts\console_println.gml</script>
+        <script>scripts\console_setColor.gml</script>
+        <script>scripts\unitTest_begin.gml</script>
+        <script>scripts\unitTest_assert.gml</script>
+        <script>scripts\unitTest_end.gml</script>
+      </scripts>
+      <scripts name="lists">
+        <script>scripts\List.gml</script>
+        <script>scripts\ds_list_filter.gml</script>
+        <script>scripts\ds_list_equals.gml</script>
+      </scripts>
+      <scripts name="strings">
+        <script>scripts\str_format.gml</script>
+        <script>scripts\str_split.gml</script>
+        <script>scripts\str_startsWith.gml</script>
+        <script>scripts\str_lstrip.gml</script>
+      </scripts>
+      <scripts name="mini functions">
+        <script>scripts\isTrue.gml</script>
+        <script>scripts\toString.gml</script>
+        <script>scripts\equals.gml</script>
+        <script>scripts\script_execute_argv.gml</script>
+      </scripts>
+      <scripts name="maps">
+        <script>scripts\Map.gml</script>
+        <script>scripts\ds_map_equals.gml</script>
       </scripts>
     </scripts>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\font_console</font>
+  </fonts>
   <objects name="objects">
     <object>objects\obj_gameManager</object>
     <object>objects\obj_galaxy</object>
@@ -238,9 +275,11 @@
       <object>objects\obj_builder</object>
       <object>objects\obj_build</object>
     </objects>
+    <object>objects\obj_console</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room_game</room>
+    <room>rooms\room_test_console</room>
   </rooms>
   <constants number="8">
     <constant name="CENTER">0</constant>
