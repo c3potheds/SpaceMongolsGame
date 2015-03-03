@@ -77,16 +77,17 @@ with (object) {
                     gui_component_set_orientation(object, component.data);
                     break;
                 case 'menu position':
-                    gui_menu_set_position(object, component.data);
+                    //gui_menu_set_position(object, component.data);
                     break;
                 case 'menu controller':
-                    gui_menu_set_controller(object, component.data);
+                    //gui_menu_set_controller(object, component.data);
                     break;
                 case 'component text color':
-                    gui_component_set_text_color(object, component.data);
+                    gui_component_set_text_color(object, component.data, 
+                            c_black);
                     break;
                 case 'component background color':
-                    gui_component_set_font
+                    //gui_component_set_font
             }
     }
 }
