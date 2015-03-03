@@ -79,6 +79,14 @@ unitTest_assert('[1, 2, 3, 4, 5].filter(x &gt; 3)',
 unitTest_assert('filter 1',
     ds_list_filter(list1, equals, 4, 'real'), List(4), 'list:real');
     
+unitTest_assert('split 1',
+        str_split('1;2;3;4;5',';'), List('1','2','3','4','5'), 'list:string');
+unitTest_assert('split 2',
+        toString(str_split('1,2,3,4,5',','),'list:string'),
+        'list["1", "2", "3", "4", "5"]', 'string');
+unitTest_assert('split 3',
+        str_split('1,2,3,4,5',';'), List('1,2,3,4,5'), 'list:string');
+
 unitTest_assert('array slice 1',
     array_slice(Array(1, 2, 3), 2, 3), Array(3), 'array:real');
 unitTest_assert('array slice 2',

@@ -58,18 +58,35 @@ var object = argument0;
 var component = argument1;
 
 with (object) {
-    switch (component.type) {
-        case obj_button:
+    switch (component.object_index) {
+        case obj_gui_button:
             menu_addButton(object, component);
             break;
-        case obj_menu:
+        case obj_gui_menu:
             menu_addMenu(object, component);
             break;
-        case obj_menuManager:
+        case obj_gui_menuManager:
             menu_addMenuManager(object, component);
             break;
-        case obj_label:
+        case obj_gui_label:
             menu_addLabel(object, component);
             break;
+        case obj_build:
+            switch (component.type) {
+                case 'menu orientation':
+                    gui_component_set_orientation(object, component.data);
+                    break;
+                case 'menu position':
+                    gui_menu_set_position(object, component.data);
+                    break;
+                case 'menu controller':
+                    gui_menu_set_controller(object, component.data);
+                    break;
+                case 'component text color':
+                    gui_component_set_text_color(object, component.data);
+                    break;
+                case 'component background color':
+                    gui_component_set_font
+            }
     }
 }

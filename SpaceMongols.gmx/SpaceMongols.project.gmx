@@ -137,6 +137,34 @@
           <script>scripts\button_draw.gml</script>
         </scripts>
       </scripts>
+      <scripts name="new gui engine">
+        <script>scripts\gui_component_set_orientation.gml</script>
+        <script>scripts\gui_component_set_width.gml</script>
+        <script>scripts\gui_component_set_parent.gml</script>
+        <script>scripts\gui_component_set_text.gml</script>
+        <script>scripts\gui_component_set_text_color.gml</script>
+        <script>scripts\gui_component_set_sprite.gml</script>
+        <script>scripts\gui_component_set_text_alpha.gml</script>
+        <script>scripts\gui_component_set_font.gml</script>
+        <script>scripts\gui_menu_create.gml</script>
+        <script>scripts\gui_menu_add_component.gml</script>
+        <script>scripts\gui_menu_update_positions.gml</script>
+        <script>scripts\gui_menu_get_height.gml</script>
+        <script>scripts\gui_menu_destroy.gml</script>
+        <script>scripts\gui_button_create.gml</script>
+        <script>scripts\gui_button_set_action.gml</script>
+        <script>scripts\gui_button_update.gml</script>
+        <script>scripts\gui_label_create.gml</script>
+        <script>scripts\gui_label_set_halign.gml</script>
+        <script>scripts\gui_label_set_valign.gml</script>
+        <script>scripts\gui_multiline_label_create.gml</script>
+        <script>scripts\gui_healthbar_create.gml</script>
+        <script>scripts\gui_healthbar_set_color.gml</script>
+        <script>scripts\gui_healthbar_set_health.gml</script>
+        <script>scripts\gui_healthbar_set_maxhealth.gml</script>
+        <script>scripts\gui_animation_text_fade_in.gml</script>
+        <script>scripts\gui_menu_set_position.gml</script>
+      </scripts>
       <scripts name="gui builder">
         <scripts name="menu">
           <script>scripts\build_menu.gml</script>
@@ -144,7 +172,6 @@
           <script>scripts\build_menu_position.gml</script>
           <script>scripts\build_menu_align.gml</script>
           <script>scripts\build_menu_controller.gml</script>
-          <script>scripts\build_menu_width.gml</script>
         </scripts>
         <scripts name="menuManager">
           <script>scripts\build_menuManager.gml</script>
@@ -157,6 +184,7 @@
           <script>scripts\build_textColor.gml</script>
           <script>scripts\build_backgroundColor.gml</script>
           <script>scripts\build_borderColor.gml</script>
+          <script>scripts\build_width.gml</script>
         </scripts>
         <scripts name="label">
           <script>scripts\build_label.gml</script>
@@ -172,7 +200,6 @@
       <script>scripts\screen_coords_x.gml</script>
     </scripts>
     <scripts name="utils">
-      <script>scripts\pass.gml</script>
       <scripts name="build engine">
         <script>scripts\build.gml</script>
         <script>scripts\builder_type.gml</script>
@@ -184,12 +211,12 @@
         <script>scripts\builder_defaultDataHandler.gml</script>
       </scripts>
       <scripts name="arrays">
+        <script>scripts\Array.gml</script>
         <script>scripts\array_slice.gml</script>
         <script>scripts\array_sliceTo.gml</script>
         <script>scripts\array_sliceFrom.gml</script>
         <script>scripts\array_equals.gml</script>
         <script>scripts\array_add.gml</script>
-        <script>scripts\Array.gml</script>
       </scripts>
       <scripts name="unit test">
         <script>scripts\console_create.gml</script>
@@ -212,9 +239,11 @@
       </scripts>
       <scripts name="mini functions">
         <script>scripts\isTrue.gml</script>
+        <script>scripts\pass.gml</script>
         <script>scripts\toString.gml</script>
         <script>scripts\equals.gml</script>
         <script>scripts\script_execute_argv.gml</script>
+        <script>scripts\instanceof.gml</script>
       </scripts>
       <scripts name="maps">
         <script>scripts\Map.gml</script>
@@ -287,8 +316,8 @@
     <constant name="LEFT">-2</constant>
     <constant name="BOTTOM">-1</constant>
     <constant name="TOP">1</constant>
-    <constant name="VERTICAL">2</constant>
-    <constant name="HORIZONTAL">1</constant>
+    <constant name="GUI_ORIENTATION_VERTICAL">2</constant>
+    <constant name="GUI_ORIENTATION_HORIZONTAL">1</constant>
     <constant name="speedOfLight">20</constant>
   </constants>
   <help>

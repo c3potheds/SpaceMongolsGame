@@ -1,5 +1,5 @@
 /*
-    argument0: button
+    argument0: component
     argument1: font
 */
 
