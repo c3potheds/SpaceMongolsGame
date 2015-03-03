@@ -8,5 +8,5 @@ if (victor == obj_gameManager.playerContext.fleet) {
     menuManager_goto(obj_gameManager.menuManager,menu_friendly);
 }
 else {
-    show_message("You lose");
+    show_message("You lose. Press R to restart.");
 }
