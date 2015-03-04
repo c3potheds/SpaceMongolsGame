@@ -100,6 +100,7 @@
       <script>scripts\button_back_callback.gml</script>
       <script>scripts\button_engage_callback.gml</script>
       <script>scripts\button_retreat_callback.gml</script>
+      <script>scripts\button_cancel_callback.gml</script>
     </scripts>
     <scripts name="server">
       <script>scripts\server_create.gml</script>
@@ -123,6 +124,7 @@
           <script>scripts\menu_build.gml</script>
           <script>scripts\menu_update.gml</script>
           <script>scripts\menu_exit.gml</script>
+          <script>scripts\menu_destroy.gml</script>
           <script>scripts\menu_enter.gml</script>
           <script>scripts\menu_draw.gml</script>
           <script>scripts\menu_addButton.gml</script>
@@ -281,6 +283,7 @@
         <object>objects\obj_menu_battle</object>
         <object>objects\obj_menu_travel</object>
         <object>objects\obj_menu_transit</object>
+        <object>objects\obj_menu_planet_popup</object>
       </objects>
       <objects name="menu controllers">
         <object>objects\obj_fleetPaneController</object>
