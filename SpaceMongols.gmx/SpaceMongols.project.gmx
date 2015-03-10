@@ -132,6 +132,7 @@
           <script>scripts\menu_addMenu.gml</script>
           <script>scripts\menu_addMenuManager.gml</script>
           <script>scripts\menu_setController.gml</script>
+          <script>scripts\menu_updatePosition.gml</script>
         </scripts>
         <scripts name="button">
           <script>scripts\button_create.gml</script>
@@ -301,8 +302,8 @@
       <object>objects\obj_player_computer</object>
     </objects>
     <object>objects\obj_ship</object>
-    <object>objects\obj_planetSelection</object>
     <object>objects\obj_server</object>
+    <object>objects\obj_planetSelection</object>
     <objects name="builders">
       <object>objects\obj_builder</object>
       <object>objects\obj_build</object>

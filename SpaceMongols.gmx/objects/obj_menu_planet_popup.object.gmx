@@ -74,7 +74,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>menu_update(obj_menuManager, id)
+            <string>menu_updatePosition(id, screen_coords_x(planet.x), screen_coords_y(planet.y))
+menu_update(obj_menuManager, id)
+
 </string>
           </argument>
         </arguments>

@@ -88,7 +88,7 @@ else {
 var menu = menu_create(obj_menu_planet_popup);
 menu.x = screen_coords_x(x)
 menu.y = screen_coords_y(y)
-
+menu.planet = id;
 
 </string>
           </argument>
