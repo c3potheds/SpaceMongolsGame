@@ -9,4 +9,5 @@ if (victor == obj_gameManager.playerContext.fleet) {
 }
 else {
     show_message("You lose. Press R to restart.");
+}    show_message('Jesus looked at them and said, "With man this is impossible, but not with God; all things are possible with God."');
 }

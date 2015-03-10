@@ -45,11 +45,15 @@ view_yview = playerContext.y-view_hview/2;
          
 player_mongols = player_create(faction_mongols, obj_player_computer);
 player_addFlagshipFleet(player_mongols,
-        galaxy_getPlanetNear(galaxy,0,room_height/2),2);
+        galaxy_getPlanetNear(galaxy,0,room_height/2),10);
 player_addFlagshipFleet(player_mongols,
-        galaxy_getPlanetNear(galaxy,0,0),2);
+        galaxy_getPlanetNear(galaxy,0,0),10);
 player_addFlagshipFleet(player_mongols,
-        galaxy_getPlanetNear(galaxy,room_width,room_height/2),5);
+        galaxy_getPlanetNear(galaxy,room_width,room_height/2),10);
+player_addFlagshipFleet(player_mongols,
+        galaxy_getPlanetNear(galaxy,room_width,room_height/2),10);
+player_addFlagshipFleet(player_mongols,
+        galaxy_getPlanetNear(galaxy,room_width,room_height/2),10);
         
 galaxy_addPlayer(galaxy,player_human);
 galaxy_addPlayer(galaxy,player_mongols);
