@@ -110,7 +110,8 @@ button_cancel = button_create("Cancel", x, y + 32, 128, 32, c_black,
 menu_addButton(id, button_travel);
 menu_addButton(id, button_cancel);
 
-menu_enter(id)
+menu_enter(id);
+
 </string>
           </argument>
         </arguments>
@@ -133,7 +134,7 @@ menu_enter(id)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>menu_draw(id)
+            <string>menu_draw(id);
 </string>
           </argument>
         </arguments>

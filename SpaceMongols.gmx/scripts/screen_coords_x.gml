@@ -1,9 +1,11 @@
 #define screen_coords_x
 ///screen_coords_x(x)
 
-return (x-view_xview)/view_wview*view_wport;
+var xx = argument0;
+return (xx-view_xview[0])/view_wview[0]*view_wport[0];
 
 #define screen_coords_y
 ///screen_coords_y(y)
 
-return (y-view_yview)/view_hview*view_hport;
+var yy = argument0;
+return (yy-view_yview[0])/view_hview[0]*view_hport[0];

@@ -41,7 +41,15 @@
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
-    <scripts name="model">
+    <scripts name="game model">
+      <scripts name="gameStateManager">
+        <script>scripts\gameStateManager_create.gml</script>
+        <script>scripts\gameStateManager_pushAction.gml</script>
+        <script>scripts\gameStateManager_pushEvent.gml</script>
+        <script>scripts\gameStateManager_eventIsVisible.gml</script>
+        <script>scripts\gameStateManager_updateLocks.gml</script>
+        <script>scripts\gameStateManager_tick.gml</script>
+      </scripts>
       <scripts name="fleet">
         <script>scripts\fleet_create.gml</script>
         <script>scripts\fleet_buildView.gml</script>
@@ -72,6 +80,8 @@
       </scripts>
       <scripts name="playerContext">
         <script>scripts\player_create.gml</script>
+        <script>scripts\playerContext_create.gml</script>
+        <script>scripts\playerContext_handleEvent.gml</script>
       </scripts>
       <scripts name="transit">
         <script>scripts\transit_create.gml</script>
@@ -89,6 +99,9 @@
         <script>scripts\planetEvent_constructionFinished.gml</script>
         <script>scripts\planetEvent_allegianceChanged.gml</script>
         <script>scripts\planetEvent_battleResults.gml</script>
+      </scripts>
+      <scripts name="playerAction">
+        <script>scripts\playerAction_initialFleet.gml</script>
       </scripts>
     </scripts>
     <scripts name="button callbacks">
@@ -251,6 +264,9 @@
       <scripts name="maps">
         <script>scripts\Map.gml</script>
         <script>scripts\ds_map_equals.gml</script>
+      </scripts>
+      <scripts name="math">
+        <script>scripts\distanceInLightYears.gml</script>
       </scripts>
     </scripts>
   </scripts>

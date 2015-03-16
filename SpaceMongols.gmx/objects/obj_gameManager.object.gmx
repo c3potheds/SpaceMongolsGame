@@ -33,8 +33,8 @@ zoomFactor = 1;
 galaxy = galaxy_create('planets.json');
 
 //Initiate factions
-faction_player = faction_create("Tsunami Federation",0);
-faction_mongols = faction_create("Space Mongols",1);
+faction_player = faction_create("Tsunami Federation",1);
+faction_mongols = faction_create("Space Mongols",2);
 
 //Initialize players
 player_human = player_create(faction_player, obj_player_human);
