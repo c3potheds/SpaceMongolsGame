@@ -1,3 +1,4 @@
+/*
 menuManager_game = build(build_menuManager(
     //PLANET CONTROL MENU
     build_menu('Planet Control Menu',

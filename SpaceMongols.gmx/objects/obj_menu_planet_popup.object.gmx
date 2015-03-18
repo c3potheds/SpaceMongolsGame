@@ -74,8 +74,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>menu_updatePosition(id, screen_coords_x(planet.x), screen_coords_y(planet.y))
-menu_update(obj_menuManager, id)
+            <string>xx = clamp(screen_coords_x(planet.x), 0, room_width - 128);
+yy = clamp(screen_coords_y(planet.y), 0, room_height - 256);
+menu_updatePosition(id, xx, yy);
+menu_update(obj_menuManager, id);
 
 </string>
           </argument>
