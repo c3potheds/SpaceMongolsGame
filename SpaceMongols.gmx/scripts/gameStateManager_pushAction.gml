@@ -18,16 +18,19 @@ with (gsm) {
             if (action.fleet == action.playerContext.fleet) {
                 action.playerContext.realTime = true;
             }
+            gameStateManager_pushEvent(gsm, planetEvent_fleetDeparts());
             break;
         case 'schedule construction':
+            gameStateManager_pushEvent(gsm, planetEvent_constructionScheduled());
             break;
         case 'cancel construction':
-            break;
-        case 'split fleet':
+            gameStateManager_pushEvent(gsm, planetEvent_constructionCancelled());
             break;
         case 'send command':
+            //TODO
             break;
         case 'engage':
+            
             break;
     }
 }

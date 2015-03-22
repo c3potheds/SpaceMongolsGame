@@ -10,6 +10,9 @@ var gsm = argument0;
 var player = argument1;
 var event = argument2;
 with (gsm) {
+    if (ansible) {
+        return true;
+    }
     if (player.localTime - event.localTime < distanceInLightYears(player, event)) {
         return true;
     }

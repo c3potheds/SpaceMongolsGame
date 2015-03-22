@@ -25,6 +25,5 @@ for (var i = 0; i < ds_list_size(playerContexts); i++) {
             player.fleet.planet, player.fleet));
 }
 gameStateManager.ansible = true;
-ds_list_copy(gameStateManager.realTimeObjects, playerContexts);
 
 return gameStateManager;

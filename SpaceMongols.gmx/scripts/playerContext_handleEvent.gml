@@ -14,12 +14,19 @@ var event = argument1;
 with (player) {
     switch (event.type) {
         case 'fleet departed':
-            break;
-        case 'fleet arrived':
+            galaxy_addTransit(perceivedGalaxy, transit_create(event.fleet,
+                    event.planet, event.destination, event.fleet.x, 
+                    event.fleet.y));
             break;
         case 'construction scheduled':
+            galaxy_scheduleConstruction(perceivedGalaxy, event.planet, 
+                    event.construction);
             break;
+        case 'construction cancelled':
+            galaxy_cancelConstruction(perceivedGalaxy, event.planet,
+                    event.construction);
         case 'battle':
+            galaxy_engageBattle(perceivedGalaxy, event.planet, event.fleet);
             break;
         
     }

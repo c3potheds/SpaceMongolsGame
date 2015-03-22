@@ -46,9 +46,9 @@
         <script>scripts\gameStateManager_create.gml</script>
         <script>scripts\gameStateManager_pushAction.gml</script>
         <script>scripts\gameStateManager_pushEvent.gml</script>
+        <script>scripts\gameStateManager_tick.gml</script>
         <script>scripts\gameStateManager_eventIsVisible.gml</script>
         <script>scripts\gameStateManager_updateLocks.gml</script>
-        <script>scripts\gameStateManager_tick.gml</script>
       </scripts>
       <scripts name="fleet">
         <script>scripts\fleet_create.gml</script>
@@ -66,6 +66,9 @@
         <script>scripts\galaxy_addPlayer.gml</script>
         <script>scripts\galaxy_getPlanetNear.gml</script>
         <script>scripts\galaxy_addTransit.gml</script>
+        <script>scripts\galaxy_scheduleConstruction.gml</script>
+        <script>scripts\galaxy_cancelConstruction.gml</script>
+        <script>scripts\galaxy_clone.gml</script>
       </scripts>
       <scripts name="planet">
         <script>scripts\planet_create.gml</script>
@@ -74,6 +77,7 @@
       </scripts>
       <scripts name="battle">
         <script>scripts\battle_resolve.gml</script>
+        <script>scripts\galaxy_engageBattle.gml</script>
       </scripts>
       <scripts name="ship">
         <script>scripts\ship_orbit.gml</script>
