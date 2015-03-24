@@ -2,6 +2,7 @@
 
 var new = instance_create(argument3, argument4, obj_transit);
 with (new) {
+    context = undefined;
     fleet = argument0;
     origin = argument1;
     destination = argument2;
@@ -15,6 +16,8 @@ with (new) {
             path_end();
         }
     }
+    origin.fleet = noone;
     move_towards_point(destination.x, destination.y, speedOfLight);
     image_angle = direction;
 }
+return new;

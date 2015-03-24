@@ -2,7 +2,7 @@
 <object>
   <spriteName>spr_transit</spriteName>
   <solid>0</solid>
-  <visible>0</visible>
+  <visible>-1</visible>
   <depth>-12</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
@@ -25,9 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>context.x = x;
-context.y = y;
-
+            <string>if (context != undefined) {
+    context.x = x;
+    context.y = y;
+}
 if (collision_point(destination.x, destination.y, id, false, false)) {
     transit_arrive(id);
 }

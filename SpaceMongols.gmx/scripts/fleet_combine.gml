@@ -10,3 +10,4 @@ with (argument1) {
     numberOfShips += argument0.numberOfShips;
     hasFlagship |= argument0.hasFlagship;
 }
+return argument1;

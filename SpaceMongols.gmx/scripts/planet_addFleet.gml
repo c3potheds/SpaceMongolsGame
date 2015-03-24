@@ -1,5 +1,6 @@
 ///planet_addFleet(planet, fleet)
 
-with (argument0) {
-    fleet_combine(fleet,argument1);
+var planet = argument0;
+with (planet) {
+    fleet = fleet_combine(fleet, argument1);
 }
