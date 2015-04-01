@@ -95,13 +95,13 @@ draw_set_halign(fa_center);
 draw_set_valign(fa_top);
 draw_text(panelx-72,panely+4,"Fleet");
 draw_text(panelx+72,panely+4,"Garrison");
-draw_sprite(spr_ship_icon,0,panelx-88,panely+64);
+draw_sprite(spr_dreadnaught_icon,0,panelx-88,panely+64);
 draw_set_halign(fa_left);
 draw_set_valign(fa_middle);
 draw_text(panelx-72,panely+64,"x"+
         string(obj_gameManager.playerContext.fleet.numberOfShips-garrisonedShips));
 if (garrisonedShips &gt; 0) {
-    draw_sprite(spr_ship_icon,0,panelx+56,panely+64);
+    draw_sprite(spr_dreadnaught_icon,0,panelx+56,panely+64);
     draw_text(panelx+72,panely+64,"x"+
             string(garrisonedShips));
 }

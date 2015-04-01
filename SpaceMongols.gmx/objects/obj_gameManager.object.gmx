@@ -115,8 +115,10 @@ else {
 //Update backgrounds
 background_x[0] = view_xview;
 background_y[0] = view_yview;
-background_x[1] = view_xview/2;
-background_y[1] = view_yview/2;
+//background_x[1] = view_xview/2;
+//background_y[1] = view_yview/2;
+
+view_fix();
 </string>
           </argument>
         </arguments>
@@ -140,6 +142,9 @@ background_y[1] = view_yview/2;
           <argument>
             <kind>1</kind>
             <string>//zoom out
+zoomFactor = clamp(zoomFactor*1.05,1,5);
+view_fix();
+/*
 var ratio = 728/1024;
 zoomFactor = clamp(zoomFactor*1.05,1,5);
 view_xview = view_xview+view_wview/2-1024*zoomFactor/2;
@@ -153,6 +158,7 @@ background_xscale[0] = zoomFactor;
 background_yscale[0] = zoomFactor;
 background_xscale[1] = 0.5+zoomFactor*0.5;
 background_yscale[1] = 0.5+zoomFactor*0.5;
+*/
 </string>
           </argument>
         </arguments>
@@ -176,9 +182,10 @@ background_yscale[1] = 0.5+zoomFactor*0.5;
           <argument>
             <kind>1</kind>
             <string>//zoom out
-var ratio = 728/1024;
 zoomFactor = clamp(zoomFactor/1.05,1,5);
-view_xview = view_xview+view_wview/2-1024*zoomFactor/2;
+view_fix();
+
+/*view_xview = view_xview+view_wview/2-1024*zoomFactor/2;
 view_yview = view_yview+view_hview/2-768*zoomFactor/2;
 view_xview = clamp(view_xview, -room_width, room_width*2 - view_wview);
 view_yview = clamp(view_yview, -room_height, room_height*2 - view_hview);
@@ -188,7 +195,7 @@ view_hview = 768*zoomFactor;
 background_xscale[0] = zoomFactor;
 background_yscale[0] = zoomFactor;
 background_xscale[1] = 0.5+zoomFactor*0.5;
-background_yscale[1] = 0.5+zoomFactor*0.5;
+background_yscale[1] = 0.5+zoomFactor*0.5;*/
 </string>
           </argument>
         </arguments>

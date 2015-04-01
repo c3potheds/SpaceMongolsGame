@@ -11,7 +11,7 @@ if (obj_planetSelection.planet != obj_gameManager.playerContext.currentPlanet) {
             obj_gameManager.playerContext.x, 
             obj_gameManager.playerContext.y);
     transit.context = obj_gameManager.playerContext;
-    galaxy_addTransit(obj_gameManager.galaxy, transit);
+    worldView_addTransit(obj_gameManager.galaxy, transit);
     menuManager_goto(argument0, menu_transit);
     
 }

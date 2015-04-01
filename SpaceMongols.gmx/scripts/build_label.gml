@@ -8,4 +8,3 @@ builder_addComponents(builder, array_sliceFrom(argument0, 1));
 builder_dataHandler(builder, _build_label_dataHandler);
 builder_componentHandler(builder, _build_label_componentHandler);
 return builder;
-

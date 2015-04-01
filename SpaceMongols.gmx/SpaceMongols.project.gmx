@@ -25,8 +25,9 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\spr_ship</sprite>
-    <sprite>sprites\spr_ship_icon</sprite>
+    <sprite>sprites\spr_dreadnaught</sprite>
+    <sprite>sprites\spr_frigate</sprite>
+    <sprite>sprites\spr_dreadnaught_icon</sprite>
     <sprite>sprites\spr_planet</sprite>
     <sprite>sprites\spr_planet_red</sprite>
     <sprite>sprites\spr_asteroid</sprite>
@@ -55,6 +56,7 @@
         <script>scripts\fleet_buildView.gml</script>
         <script>scripts\fleet_combine.gml</script>
         <script>scripts\fleet_destroyShip.gml</script>
+        <script>scripts\fleet_copy.gml</script>
       </scripts>
       <scripts name="faction">
         <script>scripts\faction_create.gml</script>
@@ -65,10 +67,6 @@
         <script>scripts\galaxy_placePlanet.gml</script>
         <script>scripts\galaxy_addPlayer.gml</script>
         <script>scripts\galaxy_getPlanetNear.gml</script>
-        <script>scripts\galaxy_addTransit.gml</script>
-        <script>scripts\galaxy_scheduleConstruction.gml</script>
-        <script>scripts\galaxy_cancelConstruction.gml</script>
-        <script>scripts\galaxy_clone.gml</script>
       </scripts>
       <scripts name="planet">
         <script>scripts\planet_create.gml</script>
@@ -91,9 +89,16 @@
         <script>scripts\transit_create.gml</script>
         <script>scripts\transit_arrive.gml</script>
       </scripts>
+      <scripts name="worldView">
+        <script>scripts\worldView_create.gml</script>
+        <script>scripts\worldView_addTransit.gml</script>
+        <script>scripts\worldView_addFleet.gml</script>
+        <script>scripts\worldView_cancelConstruction.gml</script>
+        <script>scripts\worldView_scheduleConstruction.gml</script>
+      </scripts>
     </scripts>
     <scripts name="game logic">
-      <scripts name="planet events">
+      <scripts name="planetEvent">
         <script>scripts\planetEvent_fleetDeparts.gml</script>
         <script>scripts\planetEvent_fleetArrives.gml</script>
         <script>scripts\planetEvent_fleetTransfer.gml</script>
@@ -279,6 +284,15 @@
         <script>scripts\distanceInLightYears.gml</script>
       </scripts>
     </scripts>
+    <scripts name="roster">
+      <script>scripts\roster_create.gml</script>
+      <script>scripts\roster_decode.gml</script>
+      <script>scripts\roster_add.gml</script>
+      <script>scripts\roster_get.gml</script>
+      <script>scripts\roster_numFactions.gml</script>
+    </scripts>
+    <script>scripts\SpaceMongols.gml</script>
+    <script>scripts\view_fix.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font_console</font>
@@ -337,6 +351,7 @@
     <objects name="test">
       <object>objects\obj_console</object>
       <object>objects\obj_testMenuController</object>
+      <object>objects\object_testRoster</object>
     </objects>
   </objects>
   <rooms name="rooms">
