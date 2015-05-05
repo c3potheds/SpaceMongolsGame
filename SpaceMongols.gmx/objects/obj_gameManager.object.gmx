@@ -103,13 +103,16 @@ if (dragging) {
     //view_yview = clamp(view_yview, 0, room_height - view_hview);
 }
 else {
+
+ if (instance_exists(obj_transit)) {
     var dx = playerContext.x-view_wview/2-view_xview;
     var dy = playerContext.y-view_hview/2-view_yview;
     var dist = point_distance(0,0,dx,dy);
     if (dist &gt; 0) {
         view_xview += clamp(dx*0.05*zoomFactor, -abs(dx), abs(dx));
         view_yview += clamp(dy*0.05*zoomFactor, -abs(dy), abs(dy));
-    }
+   }
+ }
 }
 
 //Update backgrounds
