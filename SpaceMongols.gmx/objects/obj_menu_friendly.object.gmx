@@ -56,15 +56,15 @@ button_transferToGarrison = button_create("&gt;",panelx-16,panely+16,32,32,c_bla
         "Transfer to garrison", button_transferToGarrison_callback);
 button_transferToFleet = button_create("&lt;",panelx-16,panely+80,32,32,c_black,
         "Transfer to fleet", button_transferToFleet_callback);
-button_fortify = button_create("Fortify",panelx*2,panely+48,64,32,c_black,
-        "Spend 1 year to create 1 ship", button_fortify_callback);
-button_travel = button_create("Travel",view_wport-96,view_hport-96,64,64,c_black,
-        "Select a destination to travel to", button_travel_callback);
+//button_fortify = button_create("Fortify",panelx*2,panely+48,64,32,c_black,
+//        "Spend 1 year to create 1 ship", button_fortify_callback);
+//button_travel = button_create("Travel",view_wport-96,view_hport-96,64,64,c_black,
+//        "Select a destination to travel to", button_travel_callback);
 
 menu_addButton(id,button_transferToGarrison);
 menu_addButton(id,button_transferToFleet);
-menu_addButton(id,button_fortify);
-menu_addButton(id,button_travel);
+//menu_addButton(id,button_fortify);
+//menu_addButton(id,button_travel);
 </string>
           </argument>
         </arguments>
