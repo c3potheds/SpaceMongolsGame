@@ -39,7 +39,7 @@ faction_mongols = faction_create("Space Mongols",2);
 //Initialize players
 player_human = player_create(faction_player, obj_player_human);
 playerContext = player_addFlagshipFleet(player_human, 
-        galaxy_getPlanetNear(galaxy,room_width/2,room_height/2),5);
+        galaxy_getPlanetNear(galaxy,room_width/2,room_height/2),20);
 view_xview = playerContext.x-view_wview/2;
 view_yview = playerContext.y-view_hview/2;
          
